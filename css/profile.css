@@ -1,0 +1,83 @@
+.screen{
+  height:100vh;
+  width:100%;
+}
+.topbar{
+  position:fixed;
+  background:#1A1A1A;
+  height:50px;
+  width:100%;
+  color:#FFF;
+  top:0;
+}
+.logo{
+  height:40px;
+  margin-left:10px;
+}
+.lupa{
+  height:17px;
+  margin-right:3px;
+}
+.searchbar{
+  font-size:18px;
+  padding-left:10px;
+  width:350px;
+  outline:none;
+}
+.bell{
+  height:20px;
+}
+
+.userphoto{
+  width:215px;
+  border:4px #CCC solid;
+  border-radius:8px;
+  background-size: contain;
+}
+
+.portada{
+  background-image: url("../img/landscape.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% auto;
+  background-attachment: inherit;
+  height:100%;
+  width:100%;
+}
+.profile{
+  height:260px;
+  width:100%;
+  background:#F2F2F2;
+}
+.bar{
+  border-radius:15px;
+  height:45px;
+  width:80%;
+  padding:20px;
+  text-align: center;
+  background:#CCCCCC;
+  display:inline-block;
+}
+.instrument{
+  position:relative;
+  height:50px;
+  margin-left:20px;
+}
+.estilo{
+  display:inline-block;
+  color:#333;
+  line-height:45px;
+  white-space:nowrap;
+  margin-right:20px;
+  font-size:22px;
+  font-weight:bold;
+}
+.bandas{
+  display:inline-block;
+  color:#333;
+  line-height:45px;
+  white-space:nowrap;
+  margin-right:20px;
+  font-size:18px;
+  font-weight:bold;
+}
