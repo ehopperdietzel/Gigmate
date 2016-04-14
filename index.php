@@ -1,3 +1,4 @@
+<?php echo "Hola";?>
 <html>
 <head>
   <title>Bienvenido a Gigmate</title>
@@ -53,3 +54,4 @@
   </table>
 </body>
 </html>
+<?php echo "Hola";?>
