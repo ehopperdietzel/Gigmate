@@ -4,7 +4,7 @@ html{
   overflow: hidden;
 }
 body{
-  font-family:lato;
+  font-family:Lato;
   margin:0;
   overflow-x: none;
   overflow-y:auto;
@@ -32,6 +32,12 @@ body{
 .t7{
   font-size:22px;
 }
+.t8{
+  font-size:24px; 
+}
+.t9{
+  font-size:26px;
+}
 .textTag{
 
 }
@@ -47,8 +53,11 @@ body{
 .Twhite{
   color:#FFF;
 }
-.Bblack{
-  background:#000;
+.bBlueish{
+  background:#182328;
+}
+.shadowed{
+  text-shadow:2px 2px #222;
 }
 .field{
   font-size:13px;
