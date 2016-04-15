@@ -11,8 +11,11 @@
   <script src="js/profile.js" type="text/javascript"></script>
 </head>
 <body>
-  <table class="screen" cellspacing="0" cellpadding="0" style="overflow-y:auto;">
+
+  <table class="screen" cellspacing="0" cellpadding="0">
+
     <!--Top Bar-->
+
     <tr height="50px">
       <td>
         <table class="topbar">
@@ -26,14 +29,18 @@
         </table>
       </td>
     </tr>
+
     <!--Middle Bar-->
+
     <tr>
       <td valign="top" style="overflow-y:auto">
-        <div style="height:calc(100vh - 50px);overflow-y:hidden;">
-          <table style="height:100%;width:100%;" cellspacing="0" cellpadding="0">
+        <div style="height:100%;width:100%;height:calc(100vh - 50px);overflow:hidden;">
+          <table style="height:100%;width:100%" cellspacing="0" cellpadding="0">
             <tr>
+
               <!--Left-->
-              <td valign="top" align="center" width="800px" style=";max-height:calc(100vh - 50px);min-width:800px;max-width:800px;overflow-y:auto;">
+
+              <td class="sized" valign="top" align="center" width="800px" style=";max-height:calc(100vh - 50px);min-width:800px;max-width:800px;overflow-y:auto;">
                 <table style="height:100%;width:800px" cellspacing="0" cellpadding="0">
                   <tr>
                     <td width="40%">
@@ -120,10 +127,15 @@
                   </tr>
                 </table>
               </td>
-              <!--Right-->
+
+              <!--Separador-->
+
               <td style="min-width:10px" width="10px"></td>
-              <td width="350px" align="right">
-                <div style="background:#F2F2F2;width:350px;height:100%;box-shadow:0px 0px 10px 1px #999;">
+
+              <!--Right-->
+
+              <td width="350px" align="right" class="sized">
+                <div style="background:#F2F2F2;width:330px;height:100%;box-shadow:0px 0px 10px 1px #999;">
                   <table cellspacing="0" cellpadding="0" style="width:100%;height:100%">
 
                     <tr>
@@ -147,26 +159,73 @@
                             <div class="contactCounter">3</div>
                           </div>
 
-
                         </div>
                       </td>
                     </tr>
+
                     <tr>
                       <td>
-                        <div class="contactos">
+                        <div class="chat">
+
+                          <div class="chatTopBar">
+
+                            <div class="chatState"></div>
+                            <div class="chatName">Paul McCartney</div>
+                            <img class="chatClose" src="img/close.png"></img>
+
+                          </div>
+                          <div class="chatMessages">
+
+                            <div class="chatMessageA">
+                              <span>HELLO?</span>
+                            </div>
+
+                            <div class="chatMessageA">
+                              <span>Hey! How are you?</span>
+                            </div>
+
+                            <div class="chatMessageA">
+                              <span>I'm fine thanks! You?</span>
+                            </div>
+
+                            <div class="chatMessageB">
+                              <div class="mess">El otro dia me encontre con un wn super agresivo wn, estaba muy enojado porque no lo dejaron ir a la fiesta del manjarsh</div>
+                            </div>
+
+                            <div class="chatMessageA">
+                              <span>HELLO?</span>
+                            </div>
+
+                            <div class="chatMessageA">
+                              <span>Hey! How are you?</span>
+                            </div>
+
+                            <div class="chatMessageA">
+                              <span>I'm fine thanks! You?</span>
+                            </div>
+
+                            <div class="chatMessageB">
+                              <div class="mess">El otro dia me encontre con un wn super agresivo wn, estaba muy enojado porque no lo dejaron ir a la fiesta del manjarsh asd as das d dsdadsda asda sdasdas  as d asd as da sd as da sd as da s    asdasdasdasd asdasdasd asdasd asdasdasd asdasdas dasdasda sdasda sdasda dsdasd as</div>
+                              <div class="visto">Visto</div>
+                            </div>
+
+                          </div>
+                          <div class="chatBottomBar">
+                            <input class="chatInput" type="text" />
+                          </div>
 
                         </div>
                       </td>
                     </tr>
-
-                </div>
+                  </table>
               </td>
+
             </tr>
           </table>
         </div>
       </td>
-      <td></td>
     </tr>
   </table>
+
 </body>
 </html>
