@@ -21,10 +21,13 @@
   margin-right:3px;
 }
 .searchbar{
-  font-size:18px;
+  font-size:15px;
+  padding:5px;
   padding-left:10px;
   width:350px;
   outline:none;
+  border:none;
+  border-radius:5px;
 }
 .bell{
   height:20px;
@@ -158,12 +161,12 @@
 .chatTopBar{
   height:40px;
   width:100%;
-  background:#FC4349;
+  background:#2C3E50;
   border-bottom:1px solid #CCC;
 }
 .chatMessages{
   background:#FFF;
-  height:calc(100% - 80px);
+  height:calc(100% - 95px);
   width:100%;
   overflow-y:auto;
 }

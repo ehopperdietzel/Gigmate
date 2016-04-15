@@ -22,7 +22,7 @@
           <tr>
             <td align="left" width="35%"><img class="logo" src="img/logo_mini.png"></img></td>
             <td align="right"><img class="lupa" src="img/lupa.png"></img></td>
-            <td align="left"><input class="searchbar" type="search" placeholder="Buscar amigos o bandas"/></td>
+            <td align="left"><input class="searchbar" type="text" placeholder="Buscar amigos o bandas"/></td>
             <td align="center"><img class="bell" src="img/bell.png"></img></td>
             <td align="left" width="6%"><div>Eduardo</div></td>
           </tr>
