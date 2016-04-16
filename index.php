@@ -1,4 +1,3 @@
-<?php echo "Hola";?>
 <html>
 <head>
   <title>Bienvenido a Gigmate</title>
