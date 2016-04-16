@@ -41,11 +41,12 @@
 .portada{
   background-image: url("../img/landscape.jpg");
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: 0px 0px;
   background-size: 100% auto;
   background-attachment: inherit;
   height:250px;
   width:100%;
+  position:relative;
 }
 .profile{
   height:250px;

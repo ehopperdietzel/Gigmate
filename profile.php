@@ -18,7 +18,7 @@
 
     <tr height="50px">
       <td>
-        <table class="topbar">
+        <table class="topbar nsel">
           <tr>
             <td align="left" width="35%"><img class="logo" src="img/logo_mini.png"></img></td>
             <td align="right"><img class="lupa" src="img/lupa.png"></img></td>
@@ -41,7 +41,7 @@
               <!--Left-->
 
               <td class="sized" valign="top" align="center" width="800px" style=";max-height:calc(100vh - 50px);min-width:800px;max-width:800px;overflow-y:auto;">
-                <table style="height:100%;width:800px" cellspacing="0" cellpadding="0">
+                <table class="nsel" style="height:100%;width:800px" cellspacing="0" cellpadding="0">
                   <tr>
                     <td width="40%">
                       <div style="width:100%;height:0px;background:#FFF"></div>
@@ -51,7 +51,10 @@
                             <img class="userphoto" src="img/nouser.png"></img><br>
                           </td>
                           <td width="70%" align="right" valign="bottom">
-                            <div class="portada"></div>
+                            <div class="portada">
+                              <div class="button ped portSave" style="position:absolute;right:100px;bottom:10px;display:none">Cambiar</div>
+                              <div class="cancelButton ped portCancel" style="position:absolute;right:10px;bottom:10px;display:none">Cancelar</div>
+                            </div>
                           </td>
                         </tr>
                       </table>
@@ -83,7 +86,7 @@
                                   <div class="biggeartitle">Cambiar</div>
                                   <div class="biggeartab showpersonalinfo">Información personal</div>
                                   <div class="biggeartab">Foto de perfil</div>
-                                  <div class="biggeartab">Foto de portada</div>
+                                  <div class="biggeartab portadaUploader">Foto de portada</div>
                                 </div>
                               </img>
                             </td>
@@ -97,7 +100,7 @@
                       <center>
                         <table cellspacing="0" cellpadding="0" width="100%" style="overflow-y:scroll;position:relative;margin-top:20px;margin-bottom:50px;font-size:13px;overflow-y:scroll">
                           <tr class="sep"><td>Mi mensaje<img class="gear ed1" src="img/gear.png"></img></td></tr>
-                          <tr><td><div class="bar">Busco músicos para formar banda de pop/rock y componer nuestros propio temas.</div></td></tr>
+                          <tr><td><div class="bar gustos">Busco músicos para formar banda de pop/rock y componer nuestros propio temas.</div></td></tr>
                           <tr class="sep"><td>Toco<img class="gear ed2" src="img/gear.png"></img></td></tr>
                           <tr>
                             <td>
@@ -243,26 +246,26 @@
       <table>
         <tr>
           <td class="inftit">Nombre:</td>
-          <td class="infdata" width="250px"><span class="inf1">Eduardo</span><input style="display:none" class="editBox chan1" type="text"/></td>
+          <td class="infdata" width="250px"><span class="inf1 sA">Eduardo</span><input style="display:none" class="editBox chan1 sB" type="text"/></td>
           <td width="150px">
-            <input class="editButton button edit1" type="button" value="Editar"/>
-            <input style="display:none" class="saveButton save1" type="button" value="Guardar"/>
-            <input style="display:none" class="cancelButton can1" type="button" value="Cancelar"/>
+            <input class="editButton button edit1 sA" type="button" value="Editar"/>
+            <input style="display:none" class="saveButton save1 sB" type="button" value="Guardar"/>
+            <input style="display:none" class="cancelButton can1 sB" type="button" value="Cancelar"/>
           </td>
         </tr>
         <tr>
           <td class="inftit">Apellido:</td>
-          <td class="infdata"><span class="inf2">Hopperdietzel</span><input style="display:none" class="editBox chan2" type="text"/></td>
+          <td class="infdata"><span class="inf2 sA">Hopperdietzel</span><input style="display:none" class="editBox chan2 sB" type="text"/></td>
           <td>
-            <input class="editButton button edit2" type="button" value="Editar"/>
-            <input style="display:none" class="saveButton save2" type="button" value="Guardar"/>
-            <input style="display:none" class="cancelButton can2" type="button" value="Cancelar"/>
+            <input class="editButton button edit2 sA" type="button" value="Editar"/>
+            <input style="display:none" class="saveButton save2 sB" type="button" value="Guardar"/>
+            <input style="display:none" class="cancelButton can2 sB" type="button" value="Cancelar"/>
           </td>
         </tr>
         <tr>
           <td class="inftit">Nacimiento:</td>
-          <td class="infdata"><span class="inf3">27/07/1996</span>
-            <div style="display:none" class="chan3">
+          <td class="infdata"><span class="inf3 sA">27/07/1996</span>
+            <div style="display:none" class="chan3 sB">
               <select class="dia">
                 <option value="1">01</option>
               </select>
@@ -275,32 +278,32 @@
             </div>
           </td>
           <td>
-              <input class="editButton button edit3" type="button" value="Editar"/>
-              <input style="display:none" class="saveButton save3" type="button" value="Guardar"/>
-              <input style="display:none" class="cancelButton can3" type="button" value="Cancelar"/>
+              <input class="editButton button edit3 sA" type="button" value="Editar"/>
+              <input style="display:none" class="saveButton save3 sB" type="button" value="Guardar"/>
+              <input style="display:none" class="cancelButton can3 sB" type="button" value="Cancelar"/>
             </td>
         </tr>
         <tr>
           <td class="inftit">Sexo:</td>
-          <td class="infdata"><span class="inf4">Hombre</span><div class="chan4" style="display:none"><input type="radio" name="gender" value="male" checked>Hombre<input type="radio" name="gender" value="female">Mujer</div></td>
+          <td class="infdata"><span class="inf4 sA">Hombre</span><div class="chan4 sB" style="display:none"><input type="radio" name="gender" value="male" checked>Hombre<input type="radio" name="gender" value="female">Mujer</div></td>
           <td>
-            <input class="editButton button edit4" type="button" value="Editar"/>
-            <input style="display:none" class="saveButton save4" type="button" value="Guardar"/>
-            <input style="display:none" class="cancelButton can4" type="button" value="Cancelar"/>
+            <input class="editButton button edit4 sA" type="button" value="Editar"/>
+            <input style="display:none" class="saveButton save4 sB" type="button" value="Guardar"/>
+            <input style="display:none" class="cancelButton can4 sB" type="button" value="Cancelar"/>
           </td>
         </tr>
         <tr>
           <td class="inftit">Ciudad:</td>
-          <td class="infdata"><span class="inf5">Valdivia</span><input class="chan5" style="display:none" type="text"></td>
+          <td class="infdata"><span class="inf5 sA">Valdivia</span><input class="chan5 sB" style="display:none" type="text"></td>
           <td>
-            <input class="editButton button edit5" type="button" value="Editar"/>
-            <input style="display:none" class="saveButton save5" type="button" value="Guardar"/>
-            <input style="display:none" class="cancelButton can5" type="button" value="Cancelar"/>
+            <input class="editButton button edit5 sA" type="button" value="Editar"/>
+            <input style="display:none" class="saveButton save5 sB" type="button" value="Guardar"/>
+            <input style="display:none" class="cancelButton can5 sB" type="button" value="Cancelar"/>
           </td>
         </tr>
       </table>
     </div>
   </div>
-
+  <input id="portadaUploader" type="file" style="display:none">
 </body>
 </html>

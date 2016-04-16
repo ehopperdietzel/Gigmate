@@ -2,6 +2,7 @@ html{
   height: 100%;
   width: 100%;
   overflow: hidden;
+  cursor:default;
 }
 body{
   font-family:lato;
@@ -19,6 +20,15 @@ body{
   height:100%;
   width:100%;
   z-index:200;
+  display:none;
+}
+.nsel {
+        cursor:default;
+        user-select: none;
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        -o-user-select: none;
 }
 .t1{
   font-size:10px;
