@@ -1,9 +1,9 @@
-var currentImage, beginDrag, dragging, portadaHeight, portadaWidth, initpy;
+var currentImage, currentTop, beginDrag, dragging, portadaHeight, portadaWidth, initpy;
 var editingPortada = false;
 $(document).ready(function(){
 
  document.onselectstart = function(){ return false; }
- 
+
   $(".instrument").tooltip({
     x: 10,
     y: 10
@@ -107,6 +107,7 @@ function readURL(input) {
 
         reader.onload = function (e) {
             currentImage = $('.portada').css("background-image").replace('url(','').replace(')','');
+            currentTop = parseInt($(".portada").css('backgroundPosition').split(' ')[1]);
             var tmpImg = new Image();
             tmpImg.src=e.target.result;
             $(tmpImg).one('load',function(){
@@ -132,7 +133,8 @@ $(".portCancel").click(function(){
   $('.portada').css({"background-image":"url('"+currentImage+"')"});
   $('.ped').hide();
   editingPortada = false;
-  $('.portada').css({"cursor":"default"});
+  $('.portada').css({"cursor":"default","background-position":"0px "+currentTop+"px"});
+
 });
 $(".portada").on("mousedown",function(e){
       if(editingPortada){
@@ -160,7 +162,10 @@ $(document).on('mouseup', function(e) {
     dragging = false;
 });
 
-
+//Profile image editor
+$('.profileUploader').click(function(){
+  $('#file').trigger("click");
+});
 
 
   $(".biggear").click(function(){
@@ -172,6 +177,38 @@ $(document).on('mouseup', function(e) {
         $(".biggearlist").hide();
     }
 });
+$(window).load(function() {
+        var options =
+        {
+            thumbBox: '.thumbBox',
+            spinner: '.spinner',
+            imgSrc: 'avatar.png'
+        }
+        var cropper;
+        $('#file').on('change', function(){
+          $('.profilephotop').show();
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                options.imgSrc = e.target.result;
+                cropper = $('.imageBox').cropbox(options);
+            }
+            reader.readAsDataURL(this.files[0]);
+            this.files = [];
+        })
+        $('#btnCrop').on('click', function(){
+            var img = cropper.getDataURL()
+            $('.userphoto').attr("src",img);
+            $('.profilephotop').hide();
+            //ajax
+            //$('.cropped').append('<img src="'+img+'">');
+        })
+        $('#btnZoomIn').on('click', function(){
+            cropper.zoomIn();
+        })
+        $('#btnZoomOut').on('click', function(){
+            cropper.zoomOut();
+        })
+    });
 
 
 

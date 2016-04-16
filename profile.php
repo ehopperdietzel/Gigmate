@@ -8,6 +8,7 @@
   <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
   <script src="js/library/jquery.js" type="text/javascript"></script>
   <script src="js/library/tooltip.js" type="text/javascript"></script>
+  <script src="js/library/crop.js" type="text/javascript"></script>
   <script src="js/profile.js" type="text/javascript"></script>
 </head>
 <body>
@@ -85,7 +86,7 @@
                                   <div class="arrow-up" style="top:-7px;right:5px;"></div>
                                   <div class="biggeartitle">Cambiar</div>
                                   <div class="biggeartab showpersonalinfo">Información personal</div>
-                                  <div class="biggeartab">Foto de perfil</div>
+                                  <div class="biggeartab profileUploader">Foto de perfil</div>
                                   <div class="biggeartab portadaUploader">Foto de portada</div>
                                 </div>
                               </img>
@@ -302,6 +303,26 @@
           </td>
         </tr>
       </table>
+    </div>
+  </div>
+  <!--Photo editor-->
+  <div class="darkbackground profilephotop">
+    <div class="photowindow">
+      <div class="container">
+        <div class="imageBox">
+            <div class="thumbBox"></div>
+            <div class="spinner" style="display: none">Loading...</div>
+        </div>
+        <div class="action">
+            <input type="file" id="file" style="display:none">
+            <input type="button" class="saveButton" id="btnCrop" value="Guardar" style="float: right">
+            <input type="button" class="cancelButton" id="btnCrop" value="Cancelar" style="float: right">
+            <input type="button" class="editButton button" id="btnZoomIn" value="+" style="float: right">
+            <input type="button" class="editButton button" id="btnZoomOut" value="-" style="float: right">
+        </div>
+        <div class="cropped">
+        </div>
+      </div>
     </div>
   </div>
   <input id="portadaUploader" type="file" style="display:none">
