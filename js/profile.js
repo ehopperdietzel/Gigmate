@@ -10,7 +10,7 @@ $(".edit1").click(function(){
   $(".edit1,.inf1").hide();
   $(".save1,.chan1,.can1").show();
 });
-$(".can1,.darkbackground").click(function(){
+$(".can1").click(function(){
   $(".edit1,.inf1").show();
   $(".save1,.chan1,.can1").hide();
 });
@@ -24,7 +24,7 @@ $(".edit2").click(function(){
   $(".edit2,.inf2").hide();
   $(".save2,.chan2,.can2").show();
 });
-$(".can2,.darkbackground").click(function(){
+$(".can2").click(function(){
   $(".edit2,.inf2").show();
   $(".save2,.chan2,.can2").hide();
 });
@@ -38,7 +38,7 @@ $(".edit3").click(function(){
   $(".edit3,.inf3").hide();
   $(".save3,.chan3,.can3").show();
 });
-$(".can3,.darkbackground").click(function(){
+$(".can3").click(function(){
   $(".edit3,.inf3").show();
   $(".save3,.chan3,.can3").hide();
 });
@@ -52,7 +52,7 @@ $(".edit4").click(function(){
   $(".edit4,.inf4").hide();
   $(".save4,.chan4,.can4").show();
 });
-$(".can4,.darkbackground").click(function(){
+$(".can4").click(function(){
   $(".edit4,.inf4").show();
   $(".save4,.chan4,.can4").hide();
 });
@@ -66,7 +66,7 @@ $(".edit5").click(function(){
   $(".edit5,.inf5").hide();
   $(".save5,.chan5,.can5").show();
 });
-$(".can5,.darkbackground").click(function(){
+$(".can5").click(function(){
   $(".edit5,.inf5").show();
   $(".save5,.chan5,.can5").hide();
 });
@@ -77,8 +77,10 @@ $(".save5").click(function(){
 });
 
 
-$(".darkbackground").click(function(){
-  $(this).hide();
+$(".darkbackground").click(function(e){
+  if(e.target == this){
+       $(".darkbackground").hide();
+   }
 });
 $(".showpersonalinfo").click(function(){
   $(".personalinfo").show();
