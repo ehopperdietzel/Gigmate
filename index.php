@@ -3,7 +3,7 @@
 <head>
   <title>Bienvenido a Gigmate</title>
   <meta charset="utf-8"/>
-<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>  <link href="css/global.css" type="text/css" rel="stylesheet"/>
+  <link href="css/global.css" type="text/css" rel="stylesheet"/>
   <link href="css/main.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
@@ -24,18 +24,18 @@
       </td>
     </tr>
     <!--Middle Bar -->
-    <tr class="middlebar bBlueish">
+    <tr class="middlebar bBlack">
       <td>
         <table width="100%" cellspacing="0" cellpadding="0">
           <tr>
             <td width="40%" align="center">
-              <div class="Twhite t9 bold shadowed" style="margin:20px">Encuentra y comparte con<br>músicos de tus mismos gustos.</div><br>
+              <div class="Twhite t7 bold" style="margin:20px">Encuentra y comparte con<br>músicos de tus mismos gustos.</div><br>
               <img style="height:300px;margin-left:40px" src="img/main.jpg"></img>
             </td>
             <td width="10%"></td>
             <td width="50%" align="center">
               <table cellpadding="7px" class="register">
-                <tr><td><div class="textTitle Twhite t8 shadowed">Regístrate</div></td></tr>
+                <tr><td><div class="textTitle Twhite t7">Regístrate</div></td></tr>
                 <tr><td><input class="field" type="text" placeholder="Nombres"/></td></tr>
                 <tr><td><input class="field" type="text" placeholder="Apellidos"/></td></tr>
                 <tr><td><input class="field" type="email" placeholder="Email"/></td></tr>

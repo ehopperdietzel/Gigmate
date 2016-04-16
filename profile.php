@@ -81,7 +81,7 @@
                                 <div class="biggearlist">
                                   <div class="arrow-up" style="top:-7px;right:5px;"></div>
                                   <div class="biggeartitle">Cambiar</div>
-                                  <div class="biggeartab">Información personal</div>
+                                  <div class="biggeartab showpersonalinfo">Información personal</div>
                                   <div class="biggeartab">Foto de perfil</div>
                                   <div class="biggeartab">Foto de portada</div>
                                 </div>
@@ -238,7 +238,69 @@
     </tr>
   </table>
   <!--Informacion personal editor-->
-  <div class="darkbackground"></div>
+  <div class="darkbackground personalinfo">
+    <div class="infowindow">
+      <table>
+        <tr>
+          <td class="inftit">Nombre:</td>
+          <td class="infdata" width="250px"><span class="inf1">Eduardo</span><input style="display:none" class="editBox chan1" type="text"/></td>
+          <td width="150px">
+            <input class="editButton button edit1" type="button" value="Editar"/>
+            <input style="display:none" class="saveButton save1" type="button" value="Guardar"/>
+            <input style="display:none" class="cancelButton can1" type="button" value="Cancelar"/>
+          </td>
+        </tr>
+        <tr>
+          <td class="inftit">Apellido:</td>
+          <td class="infdata"><span class="inf2">Hopperdietzel</span><input style="display:none" class="editBox chan2" type="text"/></td>
+          <td>
+            <input class="editButton button edit2" type="button" value="Editar"/>
+            <input style="display:none" class="saveButton save2" type="button" value="Guardar"/>
+            <input style="display:none" class="cancelButton can2" type="button" value="Cancelar"/>
+          </td>
+        </tr>
+        <tr>
+          <td class="inftit">Nacimiento:</td>
+          <td class="infdata"><span class="inf3">27/07/1996</span>
+            <div style="display:none" class="chan3">
+              <select class="dia">
+                <option value="1">01</option>
+              </select>
+              <select class="mes">
+                <option value="1">Enero</option>
+              </select>
+              <select class="año">
+                <option value="1996">1996</option>
+              </select>
+            </div>
+          </td>
+          <td>
+              <input class="editButton button edit3" type="button" value="Editar"/>
+              <input style="display:none" class="saveButton save3" type="button" value="Guardar"/>
+              <input style="display:none" class="cancelButton can3" type="button" value="Cancelar"/>
+            </td>
+        </tr>
+        <tr>
+          <td class="inftit">Sexo:</td>
+          <td class="infdata"><span class="inf4">Hombre</span><div class="chan4" style="display:none"><input type="radio" name="gender" value="male" checked>Hombre<input type="radio" name="gender" value="female">Mujer</div></td>
+          <td>
+            <input class="editButton button edit4" type="button" value="Editar"/>
+            <input style="display:none" class="saveButton save4" type="button" value="Guardar"/>
+            <input style="display:none" class="cancelButton can4" type="button" value="Cancelar"/>
+          </td>
+        </tr>
+        <tr>
+          <td class="inftit">Ciudad:</td>
+          <td class="infdata"><span class="inf5">Valdivia</span><input class="chan5" style="display:none" type="text"></td>
+          <td>
+            <input class="editButton button edit5" type="button" value="Editar"/>
+            <input style="display:none" class="saveButton save5" type="button" value="Guardar"/>
+            <input style="display:none" class="cancelButton can5" type="button" value="Cancelar"/>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
 
 </body>
 </html>

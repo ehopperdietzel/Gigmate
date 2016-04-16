@@ -4,7 +4,7 @@ html{
   overflow: hidden;
 }
 body{
-  font-family:Lato;
+  font-family:lato;
   margin:0;
   overflow-x: none;
   overflow-y:auto;
@@ -12,7 +12,13 @@ body{
   -webkit-overflow-scrolling: touch;
 }
 .darkbackground{
-
+  background:rgba(0,0,0,0.8);
+  position:absolute;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  z-index:200;
 }
 .t1{
   font-size:10px;
@@ -35,12 +41,6 @@ body{
 .t7{
   font-size:22px;
 }
-.t8{
-  font-size:24px; 
-}
-.t9{
-  font-size:26px;
-}
 .textTag{
 
 }
@@ -56,11 +56,8 @@ body{
 .Twhite{
   color:#FFF;
 }
-.bBlueish{
-  background:#182328;
-}
-.shadowed{
-  text-shadow:2px 2px #222;
+.Bblack{
+  background:#000;
 }
 .field{
   font-size:13px;
