@@ -60,7 +60,7 @@
                   <tr>
                     <td style="position:relative;height:40px;color:#FFF;">
                       <div style="top:0;left:-2px;position:absolute;background:#444;width:804px;box-shadow:0px 0px 1px 1px #444;border-radius:1px">
-                        <table style="width:100%;" cellspacing="0" cellpadding="0">
+                        <table style="width:100%;position:relative" cellspacing="0" cellpadding="0">
                           <tr>
                             <td><div class="t3" style="color:#FFF;margin:8px">
                                   <b>Paul McCartney</b>
@@ -72,9 +72,20 @@
                                   19
                                 </div>
                               </td>
-                            <td align="right">
+                            <td align="right" style="position:relative" >
+                              <!--
                               <input style="margin-right:5px" class="button t3" type="button" value="Mensaje"/>
                               <input style="margin-right:5px" class="button t3" type="button" value="Añadir"/>
+                              -->
+                              <img src="img/biggear.png" class="biggear">
+                                <div class="biggearlist">
+                                  <div class="arrow-up" style="top:-7px;right:5px;"></div>
+                                  <div class="biggeartitle">Cambiar</div>
+                                  <div class="biggeartab">Información personal</div>
+                                  <div class="biggeartab">Foto de perfil</div>
+                                  <div class="biggeartab">Foto de portada</div>
+                                </div>
+                              </img>
                             </td>
                           </tr>
                         </table>
@@ -85,9 +96,9 @@
                     <td height="100%" valign="top">
                       <center>
                         <table cellspacing="0" cellpadding="0" width="100%" style="overflow-y:scroll;position:relative;margin-top:20px;margin-bottom:50px;font-size:13px;overflow-y:scroll">
-                          <tr class="sep"><td>Mi mensaje</td></tr>
+                          <tr class="sep"><td>Mi mensaje<img class="gear ed1" src="img/gear.png"></img></td></tr>
                           <tr><td><div class="bar">Busco músicos para formar banda de pop/rock y componer nuestros propio temas.</div></td></tr>
-                          <tr class="sep"><td>Toco</td></tr>
+                          <tr class="sep"><td>Toco<img class="gear ed2" src="img/gear.png"></img></td></tr>
                           <tr>
                             <td>
                               <div class="bar">
@@ -99,7 +110,7 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="sep"><td>Mis estilos</td></tr>
+                          <tr class="sep"><td>Mis estilos<img class="gear ed3" src="img/gear.png"></img></td></tr>
                           <tr>
                             <td>
                               <div class="bar">
@@ -110,7 +121,7 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="sep"><td>Mis influencias</td></tr>
+                          <tr class="sep"><td>Mis influencias<img class="gear ed4" src="img/gear.png"></img></td></tr>
                           <tr>
                             <td>
                               <div class="bar">
@@ -226,6 +237,8 @@
       </td>
     </tr>
   </table>
+  <!--Informacion personal editor-->
+  <div class="darkbackground"></div>
 
 </body>
 </html>
