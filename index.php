@@ -48,9 +48,8 @@
     </tr>
     <!--Bottom Bar -->
     <tr class="bottombar center">
-      <td><div class="t2 Tgray">Gigmate ®<br><br>Eduardo Hopperdietzel - 2015</div></td>
+      <td><div class="t2 Tgray">Gigmate ®<br><br>Eduardo Hopperdietzel - 2016</div></td>
     </tr>
   </table>
 </body>
 </html>
-<?php echo "Hola";?>
