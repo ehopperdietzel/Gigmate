@@ -61,7 +61,7 @@
         <div class="col-md-3"></div>
         <div class="col-xs-6 col-md-5">
         	<!-- Registro -->
-          	<form role="form" data-toggle="validator">
+          	<form role="form" method="post" action="register.php" data-toggle="validator">
             	<h2 class="White sombras">Crea una cuenta <small class="Clouds eslogan">encuentra tu Gigmate.</small></h2>
 
 	            <div class="row">
