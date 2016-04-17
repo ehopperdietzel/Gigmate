@@ -10,10 +10,14 @@ body {font-family: 'Arvo', serif;}
 @media screen and ( max-width: 768px ) {
   .navbar-brand {
     transform: translateX(-50%);
-    left: 50%;
+    left: 30%;
     position: absolute;
     padding: 15px 15px;
   } 
+  .navbar-login {
+    position: absolute;
+    right: 10%;
+  }
 }
 
 .navbar-brand {
