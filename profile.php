@@ -25,8 +25,27 @@
             <td align="left" width="35%"><img class="logo" src="img/logo_mini.png"></img></td>
             <td align="right"><img class="lupa" src="img/lupa.png"></img></td>
             <td align="left"><input class="searchbar" type="text" placeholder="Buscar amigos o bandas"/></td>
-            <td align="center"><img class="bell" src="img/bell.png"></img></td>
-            <td align="left" width="6%"><div>Eduardo</div></td>
+            <td align="right" width="20px"><div class="notifCounter">1</div></td>
+            <td align="left" width="40px" style="position:relative">
+              <div style="top:45px;right:31px;z-index:200" class="arrow-up noti"></div>
+              <img class="bell" src="img/bell.png">
+                <div class="notifications noti">
+                  <div class="notifTitle">Notificaciones</div>
+                  <div class="contacto" style="background:#FFF">
+                    <img class="contactImage" src="img/nouser.png"></img>
+                    <div class="contactName">Paul McCartney</div>
+                    <div class="contactMessage" style="color:#000">Te ha enviado una solicitud.</div>
+                    <div class="agree">Aceptar</div>
+                    <div class="disagree">Rechazar</div>
+                  </div>
+                <div class="contacto">
+                  <img class="contactImage" src="img/diego.jpg"></img>
+                  <div class="contactName">Diego Sandoval</div>
+                  <div class="contactMessage">Ha aceptado tu solicitud.</div>
+                </div>
+                </div>
+              </img></td>
+            <td align="left" width="6%"><div class="userName">Eduardo</div></td>
           </tr>
         </table>
       </td>
@@ -50,7 +69,7 @@
                       <table class="profile" style="box-shadow:0px 0px 2px 2px #EEE;" cellspacing="0" cellpadding="0">
                         <tr>
                           <td width="30%" align="center" valign="bottom">
-                            <img class="userphoto" src="img/nouser.png"></img><br>
+                            <img class="userphoto" src="img/perfil.png"></img><br>
                           </td>
                           <td width="70%" align="right" valign="bottom">
                             <div class="portada">
@@ -107,26 +126,25 @@
                           <tr>
                             <td>
                               <div class="bar">
-                                <img class="instrument" tooltip="Piano" src="img/instruments/1.png"></img>
-                                <img class="instrument" tooltip="Piano" src="img/instruments/1.png"></img>
-                                <img class="instrument" tooltip="Piano" src="img/instruments/1.png"></img>
-                                <img class="instrument" tooltip="Piano" src="img/instruments/1.png"></img>
-                                <img class="instrument" tooltip="Piano" src="img/instruments/1.png"></img>
+                                <img class="instrument" tooltip="Acoredeon" src="img/instruments/4.png"></img>
+                                <img class="instrument" tooltip="Guitarra" src="img/instruments/5.png"></img>
+                                <img class="instrument" tooltip="Bajo" src="img/instruments/6.png"></img>
+                                <img class="instrument" tooltip="Piano" src="img/instruments/7.png"></img>
                               </div>
                             </td>
                           </tr>
-                          <tr class="sep"><td>Mis estilos<img class="gear ed3" src="img/gear.png"></img></td></tr>
+                          <tr class="sep"><td>Mis estilos<img class="gear ed3 stylesGear" src="img/gear.png"></img></td></tr>
                           <tr>
                             <td>
                               <div class="bar">
                                 <div class="estilo">Rock</div>
                                 <div class="estilo">Pop</div>
-                                <div class="estilo">Clásico</div>
-                                <div class="estilo">Psicodélico</div>
+                                <div class="estilo">Clásica</div>
+                                <div class="estilo">Electrónica</div>
                               </div>
                             </td>
                           </tr>
-                          <tr class="sep"><td>Mis influencias<img class="gear ed4" src="img/gear.png"></img></td></tr>
+                          <tr class="sep"><td>Mis influencias<img class="gear ed4 influencesGear" src="img/gear.png"></img></td></tr>
                           <tr>
                             <td>
                               <div class="bar">
@@ -173,6 +191,11 @@
                             <div class="contactName">Paul McCartney <span class="contactStatus"></span></div>
                             <div class="contactMessage">. . . Love is all you need boy</div>
                             <div class="contactCounter">3</div>
+                          </div>
+                          <div class="contacto">
+                            <img class="contactImage" src="img/diego.jpg"></img>
+                            <div class="contactName">Diego Sandoval <span class="contactStatus"></span></div>
+                            <div class="contactMessage">. . . cuando nos juntamos?</div>
                           </div>
 
                         </div>
@@ -342,6 +365,28 @@
       <div id="instrumentsDisplay"></div>
       <input type="button" class="saveButton" value="Guardar cambios" style="float: left">
       <input type="button" class="cancelButton" value="Cancelar" style="float: left">
+    </div>
+  </div>
+  <!--Estilos-->
+  <div class="darkbackground styleseditor">
+    <div class="instrumentswindow">
+      <div style="font-size:18px;font-weight:bold;margin-top:10px;margin-bottom:20px">Selecciona tus estilos musicales:</div>
+      <div id="stylesDisplay"></div>
+      <input type="button" class="saveButton" value="Guardar cambios" style="float: left">
+      <input type="button" class="cancelButton" value="Cancelar" style="float: left">
+    </div>
+  </div>
+  <!--Influencias-->
+  <div class="darkbackground influenceseditor">
+    <div class="instrumentswindow">
+      <div style="font-size:18px;font-weight:bold;margin-top:10px;margin-bottom:20px">Añade tus 4 influencias princpipales:</div>
+      <ul >
+        <li style="display:inline"><input type="text" placeholder="Ej: The Beatles" style="font-size:16px;padding:5px;border:solid 1px #CCC;border-radius:5px;outline:none;width:300px"/></li>
+        <li style="display:inline"><input type="button" class="editButton button" value="Añadir"></li>
+      </ul>
+      <div id="influencesDisplay"></div>
+      <input type="button" class="saveButton" value="Guardar cambios" style="float:left">
+      <input type="button" class="cancelButton" value="Cancelar" style="float:left">
     </div>
   </div>
   <input id="portadaUploader" type="file" style="display:none">

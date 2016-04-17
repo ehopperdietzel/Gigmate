@@ -175,8 +175,29 @@ $('.messageGear').click(function(){
 $('.instrumentsGear').click(function(){
   $('.instrumentseditor').show();
 });
+//Styles editor
+$('.stylesGear').click(function(){
+  $('.styleseditor').show();
+});
+//Influences editor
+$('.influencesGear').click(function(){
+  $('.influenceseditor').show();
+});
 
 
+
+
+//Notificaciones
+
+$(".bell").click(function(){
+  $(".noti").show();
+});
+$(document).mouseup(function (e){
+  var container = $(".noti");
+  if (!container.is(e.target)&& container.has(e.target).length === 0){
+      $(".noti").hide();
+  }
+});
 
   $(".biggear").click(function(){
     $(".biggearlist").show();

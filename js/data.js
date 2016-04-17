@@ -21,6 +21,7 @@ var instruments = [
       {"name":"Maracas","id":12,"play":false}
     ]}
   ];
+
   $(document).ready(function(){
     var html = "<ul>";
     var play;
@@ -48,3 +49,76 @@ var instruments = [
        }
     });
   });
+
+  var styles = [
+    {
+      "name":"Rock",
+      "is":true
+    },
+    {
+      "name":"Clásica",
+      "is":true
+    },
+    {
+      "name":"Pop",
+      "is":true
+    },
+    {
+      "name":"Hip Hop",
+      "is":false
+    },
+    {
+      "name":"Metal",
+      "is":false
+    },
+    {
+      "name":"Reggae",
+      "is":false
+    },
+    {
+      "name":"Reggeton",
+      "is":false
+    },
+    {
+      "name":"Folk",
+      "is":false
+    },
+    {
+      "name":"Country",
+      "is":false
+    },
+    {
+      "name":"Electrónica",
+      "is":true
+    },
+    {
+      "name":"Blues",
+      "is":false
+    }
+  ];
+    $(document).ready(function(){
+      var html = "<ul>";
+      var use = "";
+      for(i=0;i<styles.length;i++){
+        if(styles[i].is){
+          use = "background:#4da3ff;color:#FFF";
+        }
+        else{
+          use = "";
+        }
+
+        html += "<li class='ins' style='"+use+"'>" + styles[i].name + "</li>";
+      }
+      $("#stylesDisplay").append(html+"</ul>");
+    });
+var influences = ["The Beatles","Pink Floyd","Paul McCartney","Queen","Nirvana"];
+
+$(document).ready(function(){
+  var html = "<ul>";
+  for(i=0;i<influences.length;i++){
+
+
+    html += "<li class='ins'>" + influences[i] + "<img style='top:9px' class='chatClose' src='img/close.png'></img></li>";
+  }
+  $("#influencesDisplay").append(html+"</ul>");
+});
