@@ -18,7 +18,7 @@
 
     <!--Top Bar-->
 
-    <tr height="50px">
+    <tr height="50px" class="sized">
       <td>
         <table class="topbar nsel">
           <tr>
@@ -267,7 +267,7 @@
   </table>
   <!--Informacion personal editor-->
   <div class="darkbackground personalinfo">
-    <div class="infowindow">
+    <div class="infowindow sized">
       <table>
         <tr>
           <td class="inftit">Nombre:</td>
@@ -331,7 +331,7 @@
   </div>
   <!--Photo editor-->
   <div class="darkbackground profilephotop">
-    <div class="photowindow">
+    <div class="photowindow sized">
       <div class="container">
         <div class="imageBox">
             <div class="thumbBox"></div>
@@ -344,14 +344,12 @@
             <input type="button" class="editButton button" id="btnZoomIn" value="+" style="float: right">
             <input type="button" class="editButton button" id="btnZoomOut" value="-" style="float: right">
         </div>
-        <div class="cropped">
-        </div>
       </div>
     </div>
   </div>
   <!--Message editor-->
   <div class="darkbackground messageeditor">
-    <div class="messagewindow">
+    <div class="messagewindow sized">
       <div style="font-size:15px;margin-top:10px;margin-bottom:20px">Añade tu mensaje:</div>
       <textarea style="width:400px;height:100px;border:1px solid #CCC;border-radius:7px;resize:none;margin-bottom:10px;outline:none;padding:7px"></textarea>
       <input type="button" class="saveButton" value="Guardar" style="float: left">
@@ -360,7 +358,7 @@
   </div>
   <!--Instrumentos-->
   <div class="darkbackground instrumentseditor">
-    <div class="instrumentswindow">
+    <div class="instrumentswindow sized">
       <div style="font-size:18px;font-weight:bold;margin-top:10px;margin-bottom:20px">Selecciona los instrumentos que manejas:</div>
       <div id="instrumentsDisplay"></div>
       <input type="button" class="saveButton" value="Guardar cambios" style="float: left">
@@ -369,7 +367,7 @@
   </div>
   <!--Estilos-->
   <div class="darkbackground styleseditor">
-    <div class="instrumentswindow">
+    <div class="instrumentswindow sized">
       <div style="font-size:18px;font-weight:bold;margin-top:10px;margin-bottom:20px">Selecciona tus estilos musicales:</div>
       <div id="stylesDisplay"></div>
       <input type="button" class="saveButton" value="Guardar cambios" style="float: left">
@@ -378,7 +376,7 @@
   </div>
   <!--Influencias-->
   <div class="darkbackground influenceseditor">
-    <div class="instrumentswindow">
+    <div class="instrumentswindow sized">
       <div style="font-size:18px;font-weight:bold;margin-top:10px;margin-bottom:20px">Añade tus 4 influencias princpipales:</div>
       <ul >
         <li style="display:inline"><input type="text" placeholder="Ej: The Beatles" style="font-size:16px;padding:5px;border:solid 1px #CCC;border-radius:5px;outline:none;width:300px"/></li>
