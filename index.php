@@ -45,7 +45,7 @@
       </div>
 
       <div class="navbar-right">
-      <p class="text-center"><a href="#" class="btn btn-default navbar-login" role="button" data-toggle="modal" data-target="#login-modal">Iniciar sesión</a></p>
+      <p class="text-center"><a href="#" class="btn btn-default navbar-login izquierda" role="button" data-toggle="modal" data-target="#login-modal">Iniciar sesión</a></p>
       </div>
 
     </div>
