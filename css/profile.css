@@ -386,6 +386,48 @@
 .container{
   width:400px;
 }
+.messagewindow{
+  width:400px;
+  background:#FFF;
+  padding: 10px 30px 30px 30px;
+  border:1px solid #CCC;
+  border-radius:7px;
+  position:absolute;
+  left:calc(50% - 205px);
+  margin:0;
+  top:40%;
+}
+.instrumentswindow{
+  width:400px;
+  background:#FFF;
+  padding: 10px 30px 30px 30px;
+  border:1px solid #CCC;
+  border-radius:7px;
+  position:absolute;
+  left:calc(50% - 205px);
+  margin:0;
+  top:15%;
+}
+.instrumentswindow ul{
+  list-style: none;
+  padding:5px;
+  font-weight:bold;
+}
+.ins{
+  font-weight:normal;
+  list-style: none;
+  padding:4px;
+  vertical-align: middle;
+  border-radius:5px;
+  margin-top: 4px;
+  cursor:pointer;
+}
+.ins:hover{
+  background:#EEE;
+}
+.ins:active{
+  background:#FFF;
+}
 @media screen and (min-device-width: 1024px) {
    .sized{ zoom: 0.6 }
 }

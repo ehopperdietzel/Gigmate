@@ -167,6 +167,16 @@ $('.profileUploader').click(function(){
   $('#file').trigger("click");
 });
 
+//Message editor
+$('.messageGear').click(function(){
+  $('.messageeditor').show();
+});
+//Instruments editor
+$('.instrumentsGear').click(function(){
+  $('.instrumentseditor').show();
+});
+
+
 
   $(".biggear").click(function(){
     $(".biggearlist").show();

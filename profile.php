@@ -10,6 +10,7 @@
   <script src="js/library/tooltip.js" type="text/javascript"></script>
   <script src="js/library/crop.js" type="text/javascript"></script>
   <script src="js/profile.js" type="text/javascript"></script>
+  <script src="js/data.js" type="text/javascript"></script>
 </head>
 <body>
 
@@ -100,9 +101,9 @@
                     <td height="100%" valign="top">
                       <center>
                         <table cellspacing="0" cellpadding="0" width="100%" style="overflow-y:scroll;position:relative;margin-top:20px;margin-bottom:50px;font-size:13px;overflow-y:scroll">
-                          <tr class="sep"><td>Mi mensaje<img class="gear ed1" src="img/gear.png"></img></td></tr>
+                          <tr class="sep"><td>Mi mensaje<img class="gear ed1 messageGear" src="img/gear.png"></img></td></tr>
                           <tr><td><div class="bar gustos">Busco músicos para formar banda de pop/rock y componer nuestros propio temas.</div></td></tr>
-                          <tr class="sep"><td>Toco<img class="gear ed2" src="img/gear.png"></img></td></tr>
+                          <tr class="sep"><td>Toco<img class="gear ed2 instrumentsGear" src="img/gear.png"></img></td></tr>
                           <tr>
                             <td>
                               <div class="bar">
@@ -323,6 +324,24 @@
         <div class="cropped">
         </div>
       </div>
+    </div>
+  </div>
+  <!--Message editor-->
+  <div class="darkbackground messageeditor">
+    <div class="messagewindow">
+      <div style="font-size:15px;margin-top:10px;margin-bottom:20px">Añade tu mensaje:</div>
+      <textarea style="width:400px;height:100px;border:1px solid #CCC;border-radius:7px;resize:none;margin-bottom:10px;outline:none;padding:7px"></textarea>
+      <input type="button" class="saveButton" value="Guardar" style="float: left">
+      <input type="button" class="cancelButton" value="Cancelar" style="float: left">
+    </div>
+  </div>
+  <!--Instrumentos-->
+  <div class="darkbackground instrumentseditor">
+    <div class="instrumentswindow">
+      <div style="font-size:18px;font-weight:bold;margin-top:10px;margin-bottom:20px">Selecciona los instrumentos que manejas:</div>
+      <div id="instrumentsDisplay"></div>
+      <input type="button" class="saveButton" value="Guardar cambios" style="float: left">
+      <input type="button" class="cancelButton" value="Cancelar" style="float: left">
     </div>
   </div>
   <input id="portadaUploader" type="file" style="display:none">
