@@ -9,6 +9,10 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/gigmate.css">
+    <link rel="stylesheet" href="css/city-autocomplete.css">
+
+    <!-- Google Maps' Places API -->
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&language=en"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -50,30 +54,40 @@
           <!-- Registro -->
           <form role="form">
             <h2 class="Twhite">Regístrate <small class="Tclouds">Es gratis y siempre lo será.</small></h2>
-            <div class="form-group">
-              <input type="text" name="nombres" id="nombres" class="form-control input-lg" placeholder="Nombres" tabindex="1">
-            </div>
-            <div class="form-group">
-              <input type="text" name="apellidos" id="apellidos" class="form-control input-lg" placeholder="Apellidos" tabindex="2">
-            </div>
-            <div class="form-group">
-              <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email" tabindex="3">
-            </div>
+
             <div class="row">
               <div class="col-xs-6 col-sm-6 col-md-6">
                 <div class="form-group">
-                  <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Contraseña" tabindex="4">
+                  <input type="text" name="nombre" id="nombre" class="form-control input-md" placeholder="Nombre" tabindex="1">
                 </div>
               </div>
               <div class="col-xs-6 col-sm-6 col-md-6">
                 <div class="form-group">
-                  <input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-lg" placeholder="Confirme Contraseña" tabindex="5">
+                  <input type="text" name="apellido" id="apellido" class="form-control input-md" placeholder="Apellido" tabindex="2">
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" id="email" class="form-control input-md" placeholder="Email" tabindex="3">
+            </div>
+            <div class="form-group">
+              <input type="text" name ="city" id="city" class="form-control input-md" placeholder="Ciudad" tabindex="4" autocomplete="off" data-country="cl">
+            </div>
+            <div class="row">
+              <div class="col-xs-6 col-sm-6 col-md-6">
+                <div class="form-group">
+                  <input type="password" name="password" id="password" class="form-control input-md" placeholder="Contraseña" tabindex="5">
+                </div>
+              </div>
+              <div class="col-xs-6 col-sm-6 col-md-6">
+                <div class="form-group">
+                  <input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-md" placeholder="Confirme Contraseña" tabindex="6">
                 </div>
               </div>
             </div>      
             <div class="row">
               <div class="col-md-6"></div>
-              <div class="col-md-6"><input type="submit" value="Registrarme" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
+              <div class="col-md-6"><input type="submit" value="Registrarme" class="btn btn-primary btn-block btn-md" tabindex="7"></div>
             </div>
           </form>
        
@@ -84,9 +98,14 @@
   </div>
 
   <center><p><b>Gigmate ® 2016 - Eduardo Hopperdieztel</b></p></center>
-
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  
+  <!-- jQuery -->
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  <!-- Google Maps' Places API -->
+  <script src="js/jquery.city-autocomplete.min.js" type="text/javascript"></script>
+  <script>
+  $('input#city').cityAutocomplete();
+  </script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="js/bootstrap.min.js"></script>
 </body>
