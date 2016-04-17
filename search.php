@@ -5,7 +5,6 @@
   <link href="css/global.css" type="text/css" rel="stylesheet"/>
   <!--<link href="css/tooltip.css" type="text/css" rel="stylesheet"/>-->
   <link href="css/profile.css" type="text/css" rel="stylesheet"/>
-  <link href="css/search.css" type="text/css" rel="stylesheet"/>
   <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
   <script src="js/library/jquery.js" type="text/javascript"></script>
   <script src="js/library/tooltip.js" type="text/javascript"></script>
@@ -63,104 +62,85 @@
               <!--Left-->
 
               <td class="sized" valign="top" align="center" width="800px" style=";max-height:calc(100vh - 50px);min-width:800px;max-width:800px;overflow-y:auto;">
-                <table class="nsel" style="height:100%;width:800px" cellspacing="0" cellpadding="0">
-                  <tr>
-                    <td width="40%">
-                      <div style="width:100%;height:0px;background:#FFF"></div>
-                      <table class="profile" style="box-shadow:0px 0px 2px 2px #EEE;" cellspacing="0" cellpadding="0">
-                        <tr>
-                          <td width="30%" align="center" valign="bottom">
-                            <img class="userphoto" src="img/perfil.png"></img><br>
-                          </td>
-                          <td width="70%" align="right" valign="bottom">
-                            <div class="portada">
-                              <div class="button ped portSave" style="position:absolute;right:100px;bottom:10px;display:none">Cambiar</div>
-                              <div class="cancelButton ped portCancel" style="position:absolute;right:10px;bottom:10px;display:none">Cancelar</div>
-                            </div>
-                          </td>
-                        </tr>
-                      </table>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td style="position:relative;height:40px;color:#FFF;">
-                      <div style="top:0;left:-2px;position:absolute;background:#444;width:804px;box-shadow:0px 0px 1px 1px #444;border-radius:1px">
-                        <table style="width:100%;position:relative" cellspacing="0" cellpadding="0">
-                          <tr>
-                            <td><div class="t3" style="color:#FFF;margin:8px">
-                                  <b>Paul McCartney</b>
-                                  <span style="color:#333;font-size:20px">|</span>
-                                  Valdivia
-                                  <span style="color:#333;font-size:20px">|</span>
-                                  Hombre
-                                  <span style="color:#333;font-size:20px">|</span>
-                                  19
-                                </div>
-                              </td>
-                            <td align="right" style="position:relative" >
-                              <!--
-                              <input style="margin-right:5px" class="button t3" type="button" value="Mensaje"/>
-                              <input style="margin-right:5px" class="button t3" type="button" value="Añadir"/>
-                              -->
-                              <img src="img/biggear.png" class="biggear">
-                                <div class="biggearlist">
-                                  <div class="arrow-up" style="top:-7px;right:5px;"></div>
-                                  <div class="biggeartitle">Cambiar</div>
-                                  <div class="biggeartab showpersonalinfo">Información personal</div>
-                                  <div class="biggeartab profileUploader">Foto de perfil</div>
-                                  <div class="biggeartab portadaUploader">Foto de portada</div>
-                                </div>
-                              </img>
-                            </td>
-                          </tr>
-                        </table>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td height="100%" valign="top">
-                      <center>
-                        <table cellspacing="0" cellpadding="0" width="100%" style="overflow-y:scroll;position:relative;margin-top:20px;margin-bottom:50px;font-size:13px;overflow-y:scroll">
-                          <tr class="sep"><td>Mi mensaje<img class="gear ed1 messageGear" src="img/gear.png"></img></td></tr>
-                          <tr><td><div class="bar gustos">Busco músicos para formar banda de pop/rock y componer nuestros propio temas.</div></td></tr>
-                          <tr class="sep"><td>Toco<img class="gear ed2 instrumentsGear" src="img/gear.png"></img></td></tr>
-                          <tr>
-                            <td>
-                              <div class="bar">
-                                <img class="instrument" tooltip="Acoredeon" src="img/instruments/4.png"></img>
-                                <img class="instrument" tooltip="Guitarra" src="img/instruments/5.png"></img>
-                                <img class="instrument" tooltip="Bajo" src="img/instruments/6.png"></img>
-                                <img class="instrument" tooltip="Piano" src="img/instruments/7.png"></img>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="sep"><td>Mis estilos<img class="gear ed3 stylesGear" src="img/gear.png"></img></td></tr>
-                          <tr>
-                            <td>
-                              <div class="bar">
-                                <div class="estilo">Rock</div>
-                                <div class="estilo">Pop</div>
-                                <div class="estilo">Clásica</div>
-                                <div class="estilo">Electrónica</div>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="sep"><td>Mis influencias<img class="gear ed4 influencesGear" src="img/gear.png"></img></td></tr>
-                          <tr>
-                            <td>
-                              <div class="bar">
-                                <div class="bandas">The Beatles</div>
-                                <div class="bandas">Pink Floyd</div>
-                                <div class="bandas">Queen</div>
-                                <div class="bandas">Paul McCartney</div>
-                              </div>
-                            </td>
-                          </tr>
-                        </table>
-                      </center>
-                    </td>
-                  </tr>
-                </table>
+                <div style="width:700px;box-shadow:0 0 2px 2px #EEE;height:100%">
+                  <div align="left" style="padding:20px;font-size:20px">Buscador avanzado</div>
+                  <table align="left" class="buscador" style="border-bottom:1px solid #EEE;padding:15px">
+                    <tr>
+                      <td>Unicación:</td>
+                      <td>Toca:</td>
+                      <td>Gustos:</td>
+                      <td>Sexo:</td>
+                      <td>Edad:</td>
+                      <td>Influencias:</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <select>
+                          <option value="1" selected>Mi ciudad</option>
+                          <option value="2">Mi región</option>
+                          <option value="3">Mi país</option>
+                        </select>
+                      </td>
+                      <td>
+                        <select>
+                          <option value="1" selected>Todos</option>
+                          <option value="2">Guitarra</option>
+                          <option value="3">Piano</option>
+                        </select>
+                      </td>
+                      <td>
+                        <select>
+                          <option value="1" selected>Todos</option>
+                          <option value="2">Rock</option>
+                          <option value="3">Pop</option>
+                        </select>
+                      </td>
+                      <td>
+                        <select>
+                          <option value="1" selected>Ambos</option>
+                          <option value="2">Mujer</option>
+                          <option value="3">Hombre</option>
+                        </select>
+                      </td>
+                      <td>
+                        <select>
+                          <option value="1" selected>Todas</option>
+                          <option value="2">6-13</option>
+                          <option value="3">14-17</option>
+                          <option value="3">18-25</option>
+                          <option value="3">26-30</option>
+                          <option value="3">31-40</option>
+                          <option value="3">50-100</option>
+                        </select>
+                      </td>
+                      <td>
+                        <input type="text" style="width:200px" placeholder="No completar para no utilizar"/>
+                      </td>
+                      <td>
+                        <input type="button" value="Buscar"/>
+                      </td>
+                    </tr>
+                  </table><br>
+                  <div align="left" style="margin:20px;font-size:15px;position:relative;top:10px">Resultados:</div>
+                  <div class="results" style="padding:10px">
+                    <table style="padding:5px;background:#FFF;border:1px solid #CCC;border-radius:5px">
+                      <tr>
+                        <td><img class="resProfile" style="height:130px" src="img/diego.jpg"></img></td>
+                        <td>
+                          <table>
+                            <tr><td>Nombre:</td><td>Diego Sandoval</td></tr>
+                            <tr><td>Ubicacion:</td><td>Valdivia</td></tr>
+                            <tr><td>Edad:</td><td>19</td></tr>
+                            <tr><td>Toca:</td><td>(imagenes de instrumentos)</td></tr>
+                            <tr><td>Estilos:</td><td>Rock, Metal, Indie</td></tr>
+                            <tr><td>Influencias:</td><td>Radiohead, Foo Fighters, Interpol</td></tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
               </td>
 
               <!--Separador-->
