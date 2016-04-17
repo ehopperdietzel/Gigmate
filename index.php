@@ -52,7 +52,7 @@
         <div class="col-md-3"></div>
         <div class="col-md-5">
           <!-- Registro -->
-          <form role="form">
+          <form role="form" method="post" action="register.php">
             <h2 class="Twhite">Regístrate <small class="Tclouds">Es gratis y siempre lo será.</small></h2>
 
             <div class="row">
