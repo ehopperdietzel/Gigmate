@@ -5,10 +5,10 @@ body {
 /* Dispositivos pequeños (tablets, 768px para arriba) */
 @media screen and (max-width: 768px) {
   .navbar-brand {
-    transform: translateX(-50%);
     left: 30%;
-    position: absolute;
     padding: 15px 15px;
+    position: absolute;
+    transform: translateX(-50%);
   }
   .navbar-login {
     position: absolute;

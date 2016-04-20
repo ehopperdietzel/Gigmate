@@ -1,168 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bienvenido a Gigmate</title>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bienvenido a Gigmate</title>
 
-    <!-- Estilos -->
-    <link rel="stylesheet" href="css/bootstrap.index.min.css">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/colores.css">
-    <link rel="stylesheet" href="css/datepicker.min.css">
+	<!-- Estilos -->
+	<link rel="stylesheet" href="css/bootstrap.index.min.css">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/colores.css">
+	<link rel="stylesheet" href="css/datepicker.min.css">
 
-    <!-- jQuery -->
-    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyADGWCqtLOb-f2uc2KpSbNf8y35WldWQyg&libraries=places"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<!-- jQuery -->
+	<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyADGWCqtLOb-f2uc2KpSbNf8y35WldWQyg&libraries=places"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+      <![endif]-->
   </head>
-<body>
-<!-- modal login -->
-<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="LoginModal" aria-hidden="true" style="display: none;">
-	<div class="modal-dialog">
-		<div class="loginmodal-container">
-			<h1>Ingrese sus datos</h1><br>
-			<form>
-				<input type="text" name="user" placeholder="Email">
-				<input type="password" name="pass" placeholder="Contraseña">
-				<input type="submit" name="login" class="login loginmodal-submit" value="Iniciar sesión">
-		    </form>
-		    <div class="login-help">
-				<a href="#">Olvidé mi contraseña</a>
-		  	</div>
-		</div>
-	</div>
-</div>
-  <nav class="navbar navbar-default navbar-static-top" style="border:none;">
-    <div class="container">
+  <body>
+  	<!-- modal login -->
+  	<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="LoginModal" aria-hidden="true" style="display: none;">
+  		<div class="modal-dialog">
+  			<div class="loginmodal-container">
+  				<h1>Ingrese sus datos</h1><br>
+  				<form>
+  					<input type="text" name="user" placeholder="Email">
+  					<input type="password" name="pass" placeholder="Contraseña">
+  					<input type="submit" name="login" class="login loginmodal-submit" value="Iniciar sesión">
+  				</form>
+  				<div class="login-help">
+  					<a href="#">Olvidé mi contraseña</a>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+  	<nav class="navbar navbar-default navbar-static-top" style="border:none;">
+  		<div class="container">
 
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#"><img class="logo" alt="Gigmate" src="img/logo.png"></a>
-      </div>
+  			<div class="navbar-header">
+  				<a class="navbar-brand" href="#"><img class="logo" alt="Gigmate" src="img/logo.png"></a>
+  			</div>
 
-      <div class="navbar-right">
-      <p class="text-center"><a href="#" class="btn btn-default navbar-login izquierda" role="button" data-toggle="modal" data-target="#login-modal">Iniciar sesión</a></p>
-      </div>
+  			<div class="navbar-right">
+  				<p class="text-center"><a href="#" class="btn btn-default navbar-login izquierda" role="button" data-toggle="modal" data-target="#login-modal">Iniciar sesión</a></p>
+  			</div>
 
-    </div>
-  </nav>
+  		</div>
+  	</nav>
 
-  <div class="jumbotron main">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-6 col-md-4">
-          <p align="center" class="blanco sombras">Encuentra y comparte con<br>músicos de tus mismos gustos.</p>
-          <center><img style="height:300px;margin-left:20px" class="img-responsive" src="img/main.jpg"></center>
-        </div>
-        <div class="col-md-3"></div>
-        <div class="col-xs-6 col-md-5">
-        	<!-- Registro -->
-          	<form role="form" data-toggle="validator">
-            	<h2 class="blanco sombras">Crea una cuenta <small class="nubes eslogan">encuentra tu Gigmate.</small></h2>
+  	<div class="jumbotron main">
+  		<div class="container">
+  			<div class="row">
+  				<div class="col-xs-6 col-md-4">
+  					<p align="center" class="blanco sombras">Encuentra y comparte con<br>músicos de tus mismos gustos.</p>
+  					<center><img style="height:300px;margin-left:20px" class="img-responsive" src="img/main.jpg"></center>
+  				</div>
+  				<div class="col-md-3"></div>
+  				<div class="col-xs-6 col-md-5">
+  					<!-- Registro -->
+  					<form role="form" data-toggle="validator">
+  						<h2 class="blanco sombras">Crea una cuenta <small class="nubes eslogan">encuentra tu Gigmate.</small></h2>
 
-	            <div class="row">
-	              <div class="col-xs-6 col-sm-6 col-md-6">
-	                <div class="form-group">
-	                  <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Nombre" tabindex="1" required>
-	                </div>
-	              </div>
-	              <div class="col-xs-6 col-sm-6 col-md-6">
-	                <div class="form-group">
-	                  <input type="text" name="apellido" id="apellido" class="form-control" placeholder="Apellido" tabindex="2" required>
-	                </div>
-	              </div>
-	            </div>
+  						<div class="row">
+  							<div class="col-xs-6 col-sm-6 col-md-6">
+  								<div class="form-group">
+  									<input type="text" name="nombre" id="nombre" class="form-control" placeholder="Nombre" tabindex="1" required>
+  								</div>
+  							</div>
+  							<div class="col-xs-6 col-sm-6 col-md-6">
+  								<div class="form-group">
+  									<input type="text" name="apellido" id="apellido" class="form-control" placeholder="Apellido" tabindex="2" required>
+  								</div>
+  							</div>
+  						</div>
 
-	            <div class="form-group">
-	              	<input type="email" name="email" id="email" class="form-control" placeholder="Email" tabindex="3" data-error="Ingresa una dirección de correo válida" required>
-	              	<div class="help-block with-errors alizarin"></div>
-	            </div>
+  						<div class="form-group">
+  							<input type="email" name="email" id="email" class="form-control" placeholder="Email" tabindex="3" data-error="Ingresa una dirección de correo válida" required>
+  							<div class="help-block with-errors alizarin"></div>
+  						</div>
 
-	            <div class="form-group">
-	              <input type="text" name ="ciudad" id="ciudad" class="form-control" placeholder="Ciudad" tabindex="4" autocomplete="off" data-country="cl" data-error="Selecciona tu ciudad" required>
-	              <div class="help-block with-errors alizarin"></div>
-	            </div>
-	            <script>
-	            $(function () {
-	  				$('input#ciudad').cityAutocomplete();
-	  			});
-	  			</script>
-            
-	            <div class="row">
-	              <div class="col-xs-6 col-sm-6 col-md-6">
-		            <div class="form-group">
-					    <select name="sexo" id="sexo" class="form-control" tabindex="5" required>
-					      <option value="1">Indica tu género:</option>
-					      <option value="2">Hombre</option>
-					      <option value="3">Mujer</option>
-					    </select>
-					</div>
-	              </div>
-	              	<div class="col-xs-6 col-sm-6 col-md-6">
-		            	<div class="form-group">
-		                	<div class='input-group date' id='datetimepicker1'>
-		                    	<input type='text' class="form-control" tabindex="6" placeholder="Fecha de Nacimiento" required>
-		                    	<span class="input-group-addon">
-		                        <span class="glyphicon glyphicon-calendar"></span>
-		                    	</span>
-		                	</div>
-		            	</div>
-			            <script type="text/javascript">
-				            $(function () {
-				                $('#datetimepicker1').datetimepicker({
-				                	viewMode: 'years',
-				                	format: 'DD/MM/YYYY'
-				                });
-				            });
-			       		</script>
-	             	</div>
-            	</div>
+  						<div class="form-group">
+  							<input type="text" name ="ciudad" id="ciudad" class="form-control" placeholder="Ciudad" tabindex="4" autocomplete="off" data-country="cl" data-error="Selecciona tu ciudad" required>
+  							<div class="help-block with-errors alizarin"></div>
+  						</div>
+  						<script>
+  							$(function () {
+  								$('input#ciudad').cityAutocomplete();
+  							});
+  						</script>
+  						
+  						<div class="row">
+  							<div class="col-xs-6 col-sm-6 col-md-6">
+  								<div class="form-group">
+  									<select name="sexo" id="sexo" class="form-control" tabindex="5" required>
+  										<option value="1">Indica tu género:</option>
+  										<option value="2">Hombre</option>
+  										<option value="3">Mujer</option>
+  									</select>
+  								</div>
+  							</div>
+  							<div class="col-xs-6 col-sm-6 col-md-6">
+  								<div class="form-group">
+  									<div class='input-group date' id='datetimepicker1'>
+  										<input type='text' class="form-control" tabindex="6" placeholder="Fecha de Nacimiento" required>
+  										<span class="input-group-addon">
+  											<span class="glyphicon glyphicon-calendar"></span>
+  										</span>
+  									</div>
+  								</div>
+  								<script type="text/javascript">
+  									$(function () {
+  										$('#datetimepicker1').datetimepicker({
+  											viewMode: 'years',
+  											format: 'DD/MM/YYYY'
+  										});
+  									});
+  								</script>
+  							</div>
+  						</div>
 
-	            <div class="row">
-	              <div class="col-xs-6 col-sm-6 col-md-6">
-	                <div class="form-group">
-	                  <input type="password" name="password_r" id="password_r" class="form-control" placeholder="Contraseña" tabindex="7" data-minlength="6" required>
-	                  <div class="help-block nubes">Mínimo 6 carácteres</div>
-	                </div>
-	              </div>
-	              <div class="col-xs-6 col-sm-6 col-md-6">
-	                <div class="form-group">
-	                  <input type="password" name="password_c" id="password_c" class="form-control" placeholder="Confirme Contraseña" tabindex="8" data-match="#password_r" data-match-error="Las contraseñas no coinciden" required>
-	                  <div class="help-block with-errors alizarin"></div>
-	                </div>
-	              </div>
-	            </div>
-	            <div class="checkbox">
-					<label>
-					    <input type="checkbox" required><small class="nubes">Acepto las <a href="">Condiciones del servicio</a> y la <a href="">Política de Privacidad</a> de Gigmate.</small>
-					</label>
-				</div>
-	            <div class="row">
-	            	<div class="col-xs-6 col-sm-6 col-md-6"></div>
-                	<div class="col-xs-6 col-sm-6 col-md-6">
-                		<input type="submit" value="Crear una cuenta" class="btn btn-primary btn-block btn-md" tabindex="9">
-              		</div>
-	            </div>
-          	</form>
+  						<div class="row">
+  							<div class="col-xs-6 col-sm-6 col-md-6">
+  								<div class="form-group">
+  									<input type="password" name="password_r" id="password_r" class="form-control" placeholder="Contraseña" tabindex="7" data-minlength="6" required>
+  									<div class="help-block nubes">Mínimo 6 carácteres</div>
+  								</div>
+  							</div>
+  							<div class="col-xs-6 col-sm-6 col-md-6">
+  								<div class="form-group">
+  									<input type="password" name="password_c" id="password_c" class="form-control" placeholder="Confirme Contraseña" tabindex="8" data-match="#password_r" data-match-error="Las contraseñas no coinciden" required>
+  									<div class="help-block with-errors alizarin"></div>
+  								</div>
+  							</div>
+  						</div>
+  						<div class="checkbox">
+  							<label>
+  								<input type="checkbox" required><small class="nubes">Acepto las <a href="">Condiciones del servicio</a> y la <a href="">Política de Privacidad</a> de Gigmate.</small>
+  							</label>
+  						</div>
+  						<div class="row">
+  							<div class="col-xs-6 col-sm-6 col-md-6"></div>
+  							<div class="col-xs-6 col-sm-6 col-md-6">
+  								<input type="submit" value="Crear una cuenta" class="btn btn-primary btn-block btn-md" tabindex="9">
+  							</div>
+  						</div>
+  					</form>
 
-        </div>
+  				</div>
 
-      </div>
-    </div>
-  </div>
+  			</div>
+  		</div>
+  	</div>
 
-  <center><p>Gigmate ® 2016 - <a href="http://juanlatorre.xyz">Red Panda Studio</a></p></center>
+  	<center><p>Gigmate ® 2016 - <a href="http://juanlatorre.xyz">Red Panda Studio</a></p></center>
 
   	<!-- jQuery -->
   	<script src="js/bootstrap.min.js"></script>
   	<script src="js/moment.js"></script>
-	<script src="js/bootstrap-datetimepicker.js"></script>
-	<script src="js/jquery.city-autocomplete.min.js"></script>
-	<script src="js/validator.js"></script>
-</body>
-</html>
+  	<script src="js/bootstrap-datetimepicker.js"></script>
+  	<script src="js/jquery.city-autocomplete.min.js"></script>
+  	<script src="js/validator.js"></script>
+  </body>
+  </html>
