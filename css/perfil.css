@@ -1,0 +1,230 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700&subset=latin,latin-ext);
+body {
+  font-family: 'Lato', sans-serif;
+}
+.navbar {
+  background-color: #22313F;
+  border-radius: 0px;
+  border: none;
+  box-shadow: 0px 0px 2px 2px #000000;
+  color: #000000;
+}
+.navbar-brand {
+  float: left;
+  height: 50px;
+  padding: 0px 15px;
+}
+.dropdown.dropdown-lg {
+  position: static !important;
+}
+.dropdown.dropdown-lg .dropdown-menu {
+  margin-top: -1px;
+  min-width: 500px;
+  padding: 6px 20px;
+}
+.input-group-btn .btn-group {
+  display: flex !important;
+}
+.btn-group .btn {
+  border-radius: 0;
+  margin-left: -1px;
+}
+.btn-group .btn:last-child {
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.btn-group .form-horizontal .btn[type="submit"] {
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+}
+.form-horizontal .form-group {
+  margin-left: 0;
+  margin-right: 0;
+}
+.form-group .form-control:last-child {
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+}
+@media screen and (min-width: 768px) {
+  #adv-search {
+    width: 500px;
+    margin: 0 auto;
+  }
+  .dropdown.dropdown-lg {
+    position: static !important;
+  }
+  .dropdown.dropdown-lg .dropdown-menu {
+    min-width: 500px;
+  }
+}
+.userName {
+  color: #ffffff;
+  cursor: pointer;
+}
+.userName:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+.userName:focus {
+  color: #ffffff;
+  text-decoration: underline;
+}
+.notify-bell {
+  background: none;
+  color: #ecf0f1;
+}
+.badge-notify {
+  background: #e74c3c;
+  margin-top: -6px;
+}
+.bubble:before {
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+  border-bottom: 7px solid #CCC;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  content: '';
+  display: inline-block;
+  left: 9px;
+  left: auto;
+  position: absolute;
+  right: 12px;
+  top: -7px;
+}
+.bubble:after {
+  border-bottom: 6px solid #ffffff;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  content: '';
+  display: inline-block;
+  left: 10px;
+  position: absolute;
+  top: -6px;
+}
+.bubble::after {
+  left: auto;
+  right: 13px;
+}
+.bubble.pull-right:before {
+  left: auto;
+  right: 12px;
+}
+.bubble.pull-right:after {
+  left: auto;
+  right: 13px;
+}
+ul.dropdown-cart {
+  min-width: 250px;
+}
+ul.dropdown-cart li .item {
+  display: block;
+  margin: 3px 0;
+  padding: 3px 10px;
+}
+ul.dropdown-cart li .item:after {
+  clear: both;
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  visibility: hidden;
+}
+ul.dropdown-cart li .item-left {
+  float: left;
+}
+ul.dropdown-cart li .item-left img {
+  float: left;
+}
+ul.dropdown-cart li .item-left span.item-info {
+  float: left;
+  margin-left: 10px;
+}
+ul.dropdown-cart li .item-left span.item-info span {
+  display: block;
+}
+ul.dropdown-cart li .item-right {
+  float: right;
+}
+ul.dropdown-cart li .item-right button {
+  margin-top: 14px;
+}
+.contactImage {
+  height: 55px;
+  margin: 0px;
+}
+.contactName {
+  color: #2c3e50;
+  cursor: pointer;
+  font-size: 15px;
+}
+.contactName:hover {
+  color: #2c3e50;
+  text-decoration: underline;
+}
+.contactName:focus {
+  color: #2c3e50;
+  text-decoration: underline;
+}
+.contactMessage {
+  color: #95a5a6;
+  font-size: 12px;
+}
+.notifyTitle {
+  border-bottom: 1px solid #CCC;
+  font-size: 13px;
+  padding: 5px;
+}
+.aceptarAmigo {
+  border-bottom: 1px solid #CCC;
+  border-left: 1px solid #CCC;
+  color: #2ecc71;
+  cursor: pointer;
+  font-size: 12;
+  font-weight: bold;
+  height: 31px;
+  line-height: 30px;
+  opacity: 0.7;
+  text-align: center;
+  width: 70px;
+}
+.aceptarAmigo:hover {
+  opacity: 1;
+}
+.aceptarAmigo:active {
+  background: #bdc3c7;
+}
+.rechazarAmigo {
+  border-left: 1px solid #95a5a6;
+  color: #e74c3c;
+  cursor: pointer;
+  font-size: 12;
+  font-weight: bold;
+  height: 30px;
+  line-height: 30px;
+  opacity: 0.7;
+  text-align: center;
+  width: 70px;
+}
+.rechazarAmigo:hover {
+  opacity: 1;
+}
+.rechazarAmigo:active {
+  background: #bdc3c7;
+}
+.navbar-default .navbar-nav > .open > a {
+  background-color: transparent;
+  color: #ffffff;
+}
+.navbar-default .navbar-nav > .open > a:hover {
+  background-color: transparent;
+  color: #ffffff;
+}
+.navbar-default .navbar-nav > .open > a:focus {
+  background-color: transparent;
+  color: #ffffff;
+}
+.navbar-default .navbar-collapse {
+  border: none !important;
+}
+.navbar-default .navbar-form {
+  border: none !important;
+}
