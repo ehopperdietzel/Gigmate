@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gigmate Chat</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- jQuery 1.12.3 -->
+	<script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<style>
+		body {background: #ecf0f1;padding-bottom: 70px;}
+		.btn,.form-control{ border-radius: 0; }
+		.abajo {position:fixed;bottom: 0;margin-bottom: 1px;}
+		.arriba {width: 100%; height: 100%;}
+		#historial { list-style-type: none; margin: 0; padding: 0; }
+		#historial li { padding: 5px 10px; }
+		#historial li:nth-child(odd){background: #bdc3c7;}
+    </style>
+</head>
+<body>
+	<ul id="historial" class="arriba"> </ul>
+
+	<div class="row abajo">
+	  <div class="col-xs-12">
+	  	<form action="">
+		  	<div class="input-group">
+		      <input type="text" id="inputMensaje" autocomplete="off" class="form-control">
+		      <span class="input-group-btn">
+		        <button class="btn btn-primary" type="submit">Enviar</button>
+		      </span>
+		    </div><!-- /input-group -->
+	  	</form>
+	  </div><!-- /.col-lg-6 -->
+	</div><!-- /.row -->	
+
+<script src="/socket.io/socket.io.js"></script>
+<script>
+	var socket = io()
+	$("form").submit(function(){
+		socket.emit("mensaje chat", $("#inputMensaje").val());
+		$("#inputMensaje").val("");
+		return false;
+	});
+	socket.on('mensaje chat', function(msg){
+    	$('#historial').append($('<li>').text(msg));
+  	});
+</script>
+</body>
+</html>
