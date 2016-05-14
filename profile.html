@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Perfil | Gigmate</title>
+
+  <link rel="stylesheet" href="css/bootstrap.profile.min.css">
+  <link rel="stylesheet" href="css/profile.css">
+  <link rel="stylesheet" href="css/cropper.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
+
+  <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyADGWCqtLOb-f2uc2KpSbNf8y35WldWQyg&libraries=places"></script>
+  <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/sockets.js"></script>
+  <script src="js/blur.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/cropper.min.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/validator.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/autocomplete.js"></script>
+  <script src="js/moment.js"></script>
+  <script src="js/bootstrap-datetimepicker.js"></script>
+  <script src="js/jquery.city-autocomplete.min.js"></script>
+
+</head>
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top" style="height:52px" role="search">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+          <img alt="Gigmate" style="height:40px;margin-top:6px" src="img/logo_mini.png"></img>
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-collapse-menu">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="fnameDatas white"></span></a>
+            <ul class="dropdown-menu bubble" role="menu" style="right:10px">
+              <li><a href="#" onclick="setInfo()" class="text-center">Mi Perfil</a></li>
+              <li><a href="#" onclick="showPersonal()" class="text-center">Ajustes</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="/logout" class="text-center">Salir</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="" class="dropdown-toggle" onclick="seeNotif()" data-toggle="dropdown" role="button" aria-expanded="false" style="font-size:18px;">
+              <span id="notifCounter" class="badge badge-notify" style="background:red;display:none;">1</span>
+              <span class="glyphicon glyphicon-bell notify-bell white"></span>
+            </a>
+            <ul class="dropdown-menu mantener dropdown-cart bubble" role="menu" style="min-width:340px;right:5px">
+              <li><div class="notifTitle">Notificaciones</div></li>
+              <li style="overflow-y:auto;max-height:400px">
+                <div id="notifications"></div>
+                <center id="notifEmpty" style="margin:10px;display:none">Sin notificaciones.</center>
+              </li>
+              <div style="height:5px"></div>
+            </ul>
+          </li>
+        </ul>
+        <div class="row">
+          <div class="col-xs-4" style="margin-top:10px;margin-left: 21%">
+            <div class="input-group" id="adv-search">
+              <input id="sname" type="text" class="form-control" placeholder="Busca usuario ( Vacío para no especificar )" />
+              <div class="input-group-btn">
+                <div class="btn-group" role="group">
+                  <div class="dropdown dropdown-lg form-horizontal" role="form">
+                    <button type="button" class="btn btn-default dropdown-toggle sButton" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+                    <div class="dropdown-menu dropdown-menu-right mantener" role="menu">
+                      <div class="form-group">
+                        <label for="ubicacion">Ubicación</label>
+                        <select id="slocation" class="form-control">
+                            <option value="0">Mi País</option>
+                            <option value="1">Mi Región</option>
+                            <option value="2" selected>Mi Ciudad</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="instrumento">Instrumento</label>
+                        <select id="sinstrument" class="form-control">
+                            <option value="-1" selected>Todos</option>
+                            <option value="1">Piano</option>
+                            <option value="2">Acordeón</option>
+                            <option value="3">Pandero</option>
+                            <option value="4">Violín</option>
+                            <option value="5">Trompeta</option>
+                            <option value="6">Saxofón</option>
+                            <option value="7">Guitarra Clásica</option>
+                            <option value="8">Guitarra Eléctrica</option>
+                            <option value="9">Clarinete</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="estilo">Estilo</label>
+                        <select id="sstyle" class="form-control">
+                            <option value="-1" selected>Todos</option>
+                            <option value="1">Rock</option>
+                            <option value="2">Metal</option>
+                            <option value="3">Pop</option>
+                            <option value="4">Jazz</option>
+                            <option value="5">Rap</option>
+                            <option value="6">Bachata</option>
+                            <option value="7">Clásica</option>
+                            <option value="8">Banda</option>
+                            <option value="9">Reggae</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="sexo">Sexo</label>
+                        <select id="ssex" class="form-control">
+                            <option value="-1" selected>Ambos</option>
+                            <option value="1">Hombre</option>
+                            <option value="2">Mujer</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="edad">Edad</label>
+                        <select id="sage" class="form-control">
+                            <option value="-1" selected>Todas</option>
+                            <option value="1">Menor de 18</option>
+                            <option value="2">Entre 18-25</option>
+                            <option value="3">Entre 25-35</option>
+                            <option value="4">Entre 35-45</option>
+                            <option value="5">Entre 45-65</option>
+                            <option value="6">Mayor de 65</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="influencias">Influencias</label>
+                        <input id="sinfluences" class="form-control" type="text" placeholder="Dejar vacío para no especificar" />
+                      </div>
+                      <div class="pull-right">
+                        <button type="submit" data-toggle="dropdown" class="btn btn-primary sbutton"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Buscar</button>
+                      </div>
+                    </div>
+                  </div>
+                  <button type="button" class="btn btn-primary sbutton"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- fin del buscador -->
+      </div> <!-- fin del collapse navbar -->
+    </div> <!-- fin del container header -->
+  </nav> <!-- fin del menu superior -->
+
+
+
+
+
+
+
+  <ul class="separ">
+
+    <li class="sli sized">
+      <div style="float:right">
+        <div class="panel panel-default" style="width:300px;margin:10px">
+          <div class="panel-heading">Recomenado para ti</div>
+          <div class="panel-body">
+            Sin resultados.
+          </div>
+        </div>
+        <div class="panel panel-default" style="width:300px;margin:10px">
+          <div class="panel-heading">De <span class="cityData"></<span></div>
+          <div class="panel-body">
+            Sin resultados.
+          </div>
+        </div>
+      </div>
+    </li>
+
+
+
+    <li class="sli sized" style="min-width:800px;height:100%">
+
+
+        <div class="pWindow" style="width:800px;overflow:hidden;position:relative;float:left">
+
+          <div style="position:relative;overflow:hidden;height:300px">
+
+            <div class="bluer portada"></div>
+            <center style="position:absolute;top:0;width:100%;">
+              <ul style="list-style-type: none;color:#FFF;-webkit-text-stroke-width: 0.5px;-webkit-text-stroke-color:#888;font-weight:bold">
+                <li style="position:relative">
+                  <img class="media-object img-thumbnail photoData" style="height:150px;width:150px;border-radius:100px;margin-top:35px" src=""></img>
+                  <img class="sexData" style="position:absolute;height:20px;right:300px;bottom:-5px" src="img/male.png"></img>
+                </li>
+                <li><h2 style="margin-top:10px;margin-bottom:8px;font-weight:bold;font-size:27px"><span class="fnameData"></span> <span class="lnameData"></span></h3></li>
+                <li><h3 style="font-weight:bold;margin:0;font-size:23px"><span class="cityData"></<span></h4></li>
+                <li><h4 style="font-weight:bold;margin:8px"><span class="ageData"></<span></h4></li>
+
+              </ul>
+            </center>
+          </div>
+          <div style="width:100%;background:#23313e;padding:5px;height:45px">
+            <button type="button" style="float:left;margin-right:5px" class="btn btn-success"><span class="friendsData"></span> amigos</button>
+            <button type="button" style="float:right;display:none" onclick="" class="btn btn-primary dropdown-toggle prof soli">Amigos <span class="caret"></span></button>
+            <button type="button" style="float:right;margin-right:5px;display:none" class="btn btn-default prof">Message</button>
+            <button type="button" style="float:right;margin-right:5px" class="btn btn-info editor" id="profileUploader"><span class="glyphicon glyphicon-camera"></span></button>
+          </div>
+
+<!-- Message -->
+
+        <div class="panel panel-default" style="margin-top:10px">
+          <div class="panel-heading" style="height:40px">
+            <ul class="list-inline" style="margin:none;padding:0;width:100%">
+              <li class="lTit"><h3 class="panel-title">Mensaje</h3></li>
+              <li style="float:right" class="editor" data-toggle="modal" data-target="#modalMessage">
+                <span class="glyphicon glyphicon-pencil sel editBut uns"></span>
+              </li>
+          </ul>
+          </div>
+          <div class="panel-body messageData" style="text-align:left"></div>
+        </div>
+
+
+<!-- Instruments -->
+
+        <div class="panel panel-default" style="margin-top:10px">
+          <div class="panel-heading" style="height:40px">
+            <ul class="list-inline" style="margin:none;padding:0;width:100%">
+              <li class="lTit"><h3 class="panel-title">Toco</h3></li>
+              <li style="float:right" class="editor">
+                <span class="glyphicon glyphicon-pencil sel editBut uns" onclick="showInstrumentsEditor()"></span>
+              </li>
+            </ul>
+          </div>
+          <div class="panel-body instrumentsData" style="text-align:left"></div>
+        </div>
+
+<!-- Styles -->
+
+        <div class="panel panel-default" style="margin:-top:10px">
+          <div class="panel-heading" style="height:40px">
+            <ul class="list-inline" style="margin:none;padding:0;width:100%">
+              <li class="lTit"><h3 class="panel-title">Estilos</h3></li>
+              <li style="float:right" class="editor">
+                <span onclick="showStylesEditor()" class="glyphicon glyphicon-pencil sel editBut uns"></span>
+              </li>
+            </ul>
+          </div>
+          <div class="panel-body stylesData" style="text-align:left"></div>
+        </div>
+
+<!-- Influences -->
+
+        <div class="panel panel-default" style="margin-top:10px">
+          <div class="panel-heading" style="height:40px">
+            <ul class="list-inline" style="margin:none;padding:0;width:100%">
+              <li class="lTit"><h3 class="panel-title">Influencias</h3></li>
+              <li style="float:right" class="editor">
+                <span onclick="showInfluencesEditor()" class="glyphicon glyphicon-pencil sel editBut uns"></span>
+              </li>
+          </ul>
+          </div>
+
+          <div class="panel-body influencesData" style="text-align:left">
+
+          </div>
+        </div>
+      </div>
+
+<!-- Buscador-->
+
+      <div class="rWindow" style="margin-left:100px;text-align:left;overflow-y:auto;height:100%;display:none">
+
+        <h2>Resultados:</h2>
+
+        <div class="sResults">
+
+          </div>
+      </div>
+    </li>
+
+
+    <li class="sli sized">
+      <div style="float:left">
+        <div class="panel panel-info" style="width:300px;margin:10px">
+          <div class="panel-heading">Anuncios</div>
+          <div class="panel-body">
+            Se vende muñeca inflable, muy wena pa darle duro.
+          </div>
+        </div>
+      </div>
+    </li>
+
+      <li class="sli sized">
+          <table style="width:250px;height:100%;position:relative;box-shadow:0 0 2px 0px gray">
+            <tr class="cli" style="height:40px">
+              <td valign="top">
+              <div style="height:45px;width:100%;background:#4D4D4D;position:relative;">
+                <img class="lupa" style="margin:14px;left:-3px;position:absolute" src="img/lupa.png"></img>
+                <input type="text" style="margin-left:33px;font-size:18px;background:none;height:100%;width:260px;border:none;outline:none;color:#DDD" placeholder="Buscar"/>
+                <!--<input style="font-size:20px;width:93%;margin-top:13px" type="search" placeholder="Contactos"/>-->
+              </div>
+              </td>
+            </tr>
+            <tr class="cli" style="height:100%">
+              <td valign="top">
+                  <div class="contactos"></div>
+
+              </td>
+            </tr>
+            <tr class="cli">
+              <td valign="bottom">
+              <div class="chat" style="display:none">
+
+                <div class="chatTopBar">
+
+                  <div class="chatState"></div>
+                  <div class="chatName">Paul McCartney</div>
+                  <img class="chatClose" onclick="closeChat()" src="img/close.png"></img>
+
+                </div>
+                <div class="chatMessagesContainer">
+                  <div class="chatMessages"></div>
+                  <div style="display:none" class="visto">Visto ✓</div>
+                </div>
+                <div class="chatBottomBar" style="height:40px;padding:5px">
+                  <input class="chatInput" style="margin:0;width:100%" type="text" />
+                </div>
+
+              </div>
+            </td>
+            </tr>
+
+          </table>
+      </li>
+  </ul>
+
+
+
+
+  <!-- Image Editor -->
+  <div class="modal fade" id="modal" aria-labelledby="modalLabel" role="dialog" tabindex="-1">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="modalLabel">Crop the image</h4>
+        </div>
+        <div class="modal-body">
+          <div>
+            <img id="image" src="img/bg.png">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" onclick="uploadPhoto()" class="btn btn-primary" data-dismiss="modal">Guardar</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <form enctype="multipart/form-data" style="display:none">
+    <input id="portadaUploader" type="file"/>
+    <input type="button" value="Upload" />
+  </form>
+
+  <!-- Message Editor -->
+  <div class="modal fade modal-" id="modalMessage" aria-labelledby="modalLabel" role="dialog" tabindex="-1">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title messageTitleModal">Escribe tu mensaje ( 350 )</h4>
+        </div>
+        <div class="modal-body">
+          <textarea class="form-control" style="resize:none" rows="5" id="messageID" maxlength="350"></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" onclick="uploadMessage()" class="btn btn-primary" data-dismiss="modal">Guardar</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!--Instruments -->
+  <div class="modal fade modal-" id="modalInstruments" aria-labelledby="modalLabel" role="dialog" tabindex="-1">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title messageTitleModal">Selecciona tus instrumentos</h4>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+          <div class="row">
+              <div class="col-sm-6 col-sm-offset-3">
+                  <div id="imaginary_container">
+                      <div class="input-group stylish-input-group" style="margin-bottom:20px">
+                          <input id="instrumentSearch" type="text" class="form-control" autocomplete="off"  placeholder="Busca" >
+                          <span class="input-group-addon">
+                                  <span class="glyphicon glyphicon-search"></span>
+
+                          </span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          </div>
+          <div class="addedInstruments">
+
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" onclick="uploadInstruments()" class="btn btn-primary" data-dismiss="modal">Guardar</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!--Styles -->
+  <div class="modal fade modal-" id="modalStyles" aria-labelledby="modalLabel" role="dialog" tabindex="-1">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title messageTitleModal">Selecciona tus estilos</h4>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+          <div class="row">
+              <div class="col-sm-6 col-sm-offset-3">
+                  <div id="imaginary_container">
+                      <div class="input-group stylish-input-group" style="margin-bottom:20px">
+                          <input id="stylesSearch" type="text" class="form-control" autocomplete="off"  placeholder="Busca" >
+                          <span class="input-group-addon">
+                                  <span class="glyphicon glyphicon-search"></span>
+
+                          </span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          </div>
+          <div class="addedStyles">
+
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" onclick="uploadStyles()" class="btn btn-primary" data-dismiss="modal">Guardar</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Influences -->
+  <div class="modal fade modal-" id="modalInfluences" aria-labelledby="modalLabel" role="dialog" tabindex="-1">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title messageTitleModal">Selecciona tus estilos</h4>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6 col-sm-offset-3">
+                <div class="input-group">
+                  <input type="text" id="infSBar" class="form-control SearchBar" placeholder="Artista / Banda">
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary SearchButton" id="infBtn" type="button">
+                        <span class="glyphicon glyphicon-plus-sign" ></span>
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="addedInfluences">
+
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" onclick="uploadInfluences()" class="btn btn-primary" data-dismiss="modal">Guardar</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Personal Info -->
+  <div class="modal fade modal-"  id="modalPersonal" aria-labelledby="modalLabel" role="dialog" tabindex="-1">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title messageTitleModal">Edita tu información personal</h4>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+              <br>
+                  <div class="alert alert-info alert-dismissable" style="display:none">
+                    <a class="panel-close close" data-dismiss="alert">×</a>
+                    <i class="fa fa-coffee"></i>
+                    This is an <strong>.alert</strong>. Use this to show important messages to the user.
+                  </div>
+                  <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                      <label class="col-lg-3 control-label">Nombre:</label>
+                      <div class="col-lg-8">
+                        <input class="form-control fnamePersona" id="nombre" type="text" value="Jane">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-lg-3 control-label">Apellido:</label>
+                      <div class="col-lg-8">
+                        <input class="form-control lnamePersona" id="apellido" type="text" value="Bishop">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-lg-3 control-label">Ciudad:</label>
+                      <div class="col-lg-8">
+                        <input type="text" name="city" id="ciudad" class="form-control cityPersona" placeholder="Ciudad" tabindex="4" autocomplete="off" data-country="cl" data-error="Selecciona tu ciudad" required>
+                      </div>
+      	            </div>
+                    <div class="form-group">
+                      <label class="col-md-3 control-label">Contraseña:</label>
+                      <div class="col-md-8">
+                        <input class="form-control passPersona" id="pass1"  type="password">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-md-3 control-label">Confirma Contraseña:</label>
+                      <div class="col-md-8">
+                        <input class="form-control passPersona" type="password">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-md-3 control-label">Fecha de nacimiento:</label>
+                      <div class="col-md-8">
+  		                	<div class='input-group date' id='datetimepicker1'>
+  		                    	<input id="bdate" name="bdate"type='text' class="form-control agePersona" tabindex="6" value="27/09/1996" placeholder="Fecha de Nacimiento" required>
+  		                    	<span class="input-group-addon">
+  		                        <span class="glyphicon glyphicon-calendar"></span>
+  		                    	</span>
+  		                	</div>
+                      </div>
+  		            	</div>
+                    <div class="form-group">
+                      <label class="col-md-3 control-label">Sexo:</label>
+                      <div class="col-md-8">
+          					    <select name="sex" id="sex" class="form-control sexPersona" tabindex="5" required>
+          					      <option disabled>Indica tu género:</option>
+          					      <option value="1">Hombre</option>
+          					      <option value="2">Mujer</option>
+          					    </select>
+                        </div>
+          					</div>
+                  </form>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" onclick="uploadPersonal()" class="btn btn-primary" data-dismiss="modal">Guardar</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

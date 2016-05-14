@@ -2550,3 +2550,10 @@
         viewDate: false
     };
 }));
+
+$(function () {
+    $('#datetimepicker1').datetimepicker({
+      viewMode: 'years',
+      format: 'DD/MM/YYYY'
+    });
+});

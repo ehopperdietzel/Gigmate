@@ -27,14 +27,14 @@
 	<div class="modal-dialog">
 		<div class="loginmodal-container">
 			<h1>Ingrese sus datos</h1><br>
-			<form>
-				<input type="text" name="user" placeholder="Email">
-				<input type="password" name="pass" placeholder="Contraseña">
-				<input type="submit" name="login" class="login loginmodal-submit" value="Iniciar sesión">
-		    </form>
-		    <div class="login-help">
-				<a href="#">Olvidé mi contraseña</a>
-		  	</div>
+			<form id="lform">
+				<input id="lemail" type="text" name="user" placeholder="Email">
+				<input id="lpass" type="password" name="pass" placeholder="Contraseña">
+				<input id="lbtn" type="submit" name="login" class="login loginmodal-submit" value="Iniciar sesión">
+	    </form>
+	    <div class="login-help">
+			<a href="#">Olvidé mi contraseña</a>
+	  	</div>
 		</div>
 	</div>
 </div>
@@ -85,23 +85,9 @@
 
 	            <div class="form-group">
 	              <input type="text" name="city" id="ciudad" class="form-control" placeholder="Ciudad" tabindex="4" autocomplete="off" data-country="cl" data-error="Selecciona tu ciudad" required>
-	              <div class="help-block with-errors Alizarin"></div>
+	              <div class="help-block with-errors Alizarin cityMsg"></div>
 	            </div>
-	            <script>
-	            $(function () {
-                var options = {
-                    types: ['(cities)'],
-                    componentRestrictions: {country: ["chl"]}
-                };
-                $("input#ciudad").geocomplete(options).bind("geocode:result", function(event, result){
-                  console.log(result.address_components);
-                  city = result.address_components[0].long_name;
-                  region = result.address_components[2].long_name;
-                  country = result.address_components[result.address_components.length-1].long_name;
-                });
 
-	  			});
-	  			</script>
 
 	            <div class="row">
 	              <div class="col-xs-6 col-sm-6 col-md-6">
@@ -122,14 +108,6 @@
 		                    	</span>
 		                	</div>
 		            	</div>
-			            <script type="text/javascript">
-				            $(function () {
-				                $('#datetimepicker1').datetimepicker({
-				                	viewMode: 'years',
-				                	format: 'DD/MM/YYYY'
-				                });
-				            });
-			       		</script>
 	             	</div>
             	</div>
 
